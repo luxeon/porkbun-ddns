@@ -25,7 +25,7 @@ LAST_IP=$(cat "$IP_FILE")
 # Check if the IP has changed
 if [ "$CURRENT_IP" != "$LAST_IP" ]; then
   # URL for updating the DNS record
-  API_URL="https://porkbun.com/api/json/v3/dns/editByNameType/$DOMAIN/A/$SUBDOMAIN"
+  API_URL="https://api.porkbun.com/api/json/v3/dns/editByNameType/$DOMAIN/A/$SUBDOMAIN"
 
   # Data for the update request
   DATA=$(cat <<EOF
